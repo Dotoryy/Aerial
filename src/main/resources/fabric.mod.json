@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "aerial",
+	"version": "${version}",
+	"name": "Aerial",
+	"description": "Fabric client mod for Minecraft 26.2. MSDF text, distance-field shapes, and a blur/bloom HUD layer that bypasses vanilla GUI rendering.",
+	"authors": [
+		"Dotoryy"
+	],
+	"contact": {
+		"homepage": "https://github.com/Dotoryy/Aerial",
+		"sources": "https://github.com/Dotoryy/Aerial"
+	},
+	"license": "GPL-3.0-only",
+	"icon": "assets/aerial/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"cc.aerial.Aerial"
+		],
+		"client": [
+			"cc.aerial.client.AerialClient"
+		]
+	},
+	"mixins": [
+		"aerial.mixins.json",
+		{
+			"config": "aerial.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
